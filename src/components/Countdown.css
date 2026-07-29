@@ -1,0 +1,110 @@
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 34px 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.12);
+}
+
+.countdown__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.countdown__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.countdown__cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 18px 6px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.countdown__glow {
+  position: absolute;
+  inset: -30% -30% auto -30%;
+  height: 60%;
+  background: var(--grad);
+  filter: blur(22px);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.countdown__num {
+  position: relative;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__label {
+  position: relative;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.countdown__target {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+}
+
+.countdown--live {
+  align-items: center;
+  justify-content: center;
+  padding: 48px 28px;
+}
+
+.countdown__begun {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 26px);
+  letter-spacing: 0.02em;
+  text-align: center;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    padding: 26px 18px;
+  }
+  .countdown__grid {
+    gap: 8px;
+  }
+  .countdown__cell {
+    padding: 14px 4px;
+  }
+}

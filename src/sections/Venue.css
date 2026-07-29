@@ -1,0 +1,112 @@
+.venue {
+  padding: 120px 0 90px;
+  background: var(--bg);
+}
+
+.venue__band {
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  background: var(--grad-soft);
+  border: 1px solid var(--line-strong);
+  margin-bottom: 90px;
+}
+
+.venue__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.venue__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--cyan);
+}
+
+.venue__row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.venue__label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-bottom: 4px;
+}
+
+.venue__value {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.venue__committee-title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.venue__committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.venue__committee-card {
+  text-align: center;
+  padding: 28px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.venue__committee-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--line-strong);
+}
+
+.venue__committee-role {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--violet);
+  background: rgba(168, 85, 247, 0.12);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+
+.venue__committee-card h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.venue__committee-card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .venue {
+    padding: 80px 0 70px;
+  }
+  .venue__band {
+    padding: 28px 22px;
+    margin-bottom: 64px;
+  }
+}
