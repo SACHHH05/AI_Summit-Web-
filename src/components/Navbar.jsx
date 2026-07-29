@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_ITEMS } from "../data/content.js";
 import "./Navbar.css";
@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
 
-  // Detect when the page is scrolled
+  // Detect page scroll
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 12);
@@ -21,7 +21,7 @@ export default function Navbar() {
     };
   }, []);
 
-  // Detect active section while scrolling
+  // Detect active section
   useEffect(() => {
     const sections = NAV_ITEMS
       .map((item) => document.getElementById(item.id))
@@ -51,13 +51,15 @@ export default function Navbar() {
     };
   }, []);
 
-  // Smooth scroll to section
+  // Smooth scroll navigation
   const goTo = useCallback(
     (id) => (e) => {
       e.preventDefault();
 
+      // Close mobile menu
       setOpen(false);
 
+      // Scroll to section
       document
         .getElementById(id)
         ?.scrollIntoView({
@@ -68,27 +70,22 @@ export default function Navbar() {
     []
   );
 
-  // Flashlight hover effect
-  const flashlightRef = useRef(null);
-
-  const handleLinksMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-
-    if (flashlightRef.current) {
-      flashlightRef.current.style.left = `${e.clientX - rect.left}px`;
-    }
-  };
-
   return (
     <header className={`navbar ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container navbar__inner">
-        {/* Brand */}
+
+        {/* Logo / Brand */}
         <a
           href="#home"
           className="navbar__brand"
           onClick={goTo("home")}
         >
-          AI CONCLAVE
+          <span
+            className="navbar__dot"
+            aria-hidden="true"
+          />
+
+          AI CONCLAVE{" "}
           <span className="navbar__brand-accent">
             &apos;26
           </span>
@@ -98,20 +95,17 @@ export default function Navbar() {
         <nav
           className="navbar__links"
           aria-label="Primary"
-          onMouseMove={handleLinksMouseMove}
         >
-          <span
-            className="navbar__flashlight"
-            ref={flashlightRef}
-            aria-hidden="true"
-          />
-
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
               onClick={goTo(item.id)}
-              className={active === item.id ? "is-active" : ""}
+              className={
+                active === item.id
+                  ? "is-active"
+                  : ""
+              }
             >
               {item.label}
             </a>
@@ -124,22 +118,32 @@ export default function Navbar() {
           className="navbar__burger"
           aria-label="Toggle navigation menu"
           aria-expanded={open}
-          onClick={() => setOpen((isOpen) => !isOpen)}
+          onClick={() => setOpen((o) => !o)}
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? (
+            <X size={24} />
+          ) : (
+            <Menu size={24} />
+          )}
         </button>
       </div>
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`navbar__drawer ${open ? "is-open" : ""}`}
+        className={`navbar__drawer ${
+          open ? "is-open" : ""
+        }`}
       >
         {NAV_ITEMS.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
             onClick={goTo(item.id)}
-            className={active === item.id ? "is-active" : ""}
+            className={
+              active === item.id
+                ? "is-active"
+                : ""
+            }
           >
             {item.label}
           </a>

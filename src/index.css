@@ -22,6 +22,8 @@
   --cyan: #22d3ee;
   --indigo: #6366f1;
   --violet: #a855f7;
+  --lime: #d4ff5c;
+  --nav-grey: #404040;
 
   --grad: linear-gradient(120deg, #22d3ee 0%, #6366f1 55%, #a855f7 100%);
   --grad-soft: linear-gradient(120deg, rgba(34, 211, 238, 0.14) 0%, rgba(99, 102, 241, 0.14) 55%, rgba(168, 85, 247, 0.14) 100%);
@@ -36,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 108px;
 }
 
 body {

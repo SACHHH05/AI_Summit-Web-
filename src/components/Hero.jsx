@@ -22,9 +22,9 @@ export default function Hero() {
         <div className="hero__grid-cols">
           <div className="hero__left">
             <h1 className="hero__title">
-                AI CONCLAVE
+              AI CONCLAVE
               <span className="hero__title-accent">2026</span>
-              </h1>
+            </h1>
             <p className="hero__desc">
               Global Technical Symposium on AI &amp; Emerging Technologies.
               <br />

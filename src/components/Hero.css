@@ -68,7 +68,7 @@
 .hero__meta-line {
   width: 30px;
   height: 1px;
-  background: var(--grad);
+  background: var(--muted-2);
 }
 
 .hero__meta-text {
@@ -87,7 +87,7 @@
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   gap: 64px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero__left {
@@ -96,42 +96,46 @@
 
 .hero__title {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(48px, 8vw, 108px);
+  font-weight: 800;
+  font-size: clamp(48px, 8.5vw, 116px);
   line-height: 0.98;
   letter-spacing: -0.02em;
   color: var(--text);
-  margin-bottom: 28px;
+  margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 .hero__title-accent {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 32px;
+  font-size: clamp(46px, 8vw, 108px);
   color: transparent;
+  -webkit-text-stroke: 2px var(--lime);
+  text-stroke: 2px var(--lime);
+}
+
+@media (max-width: 540px) {
+  .hero__title {
+    white-space: normal;
+  }
 }
 
 .hero__desc {
-  font-size: clamp(15.5px, 1.6vw, 18px);
-  line-height: 1.75;
+  font-family: var(--font-mono);
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 1.8;
   color: var(--muted);
   max-width: 560px;
 }
 
 .hero__hl {
-  color: var(--text);
   font-weight: 600;
-  background-image: linear-gradient(var(--grad));
-  background-image: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline;
-  text-decoration-color: rgba(168, 85, 247, 0.4);
-  text-underline-offset: 4px;
+  color: var(--lime);
 }
 
 .hero__right {
+  align-self: end;
   animation: fade-up 0.7s ease 0.16s both;
 }
 

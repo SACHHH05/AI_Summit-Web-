@@ -35,7 +35,7 @@ export default function Countdown() {
 
   if (!time) {
     return (
-      <div className="countdown countdown--live">
+      <div className="countdown">
         <p className="countdown__begun">THE EVENT HAS BEGUN</p>
       </div>
     );
@@ -43,17 +43,14 @@ export default function Countdown() {
 
   return (
     <div className="countdown">
-      <span className="countdown__eyebrow">Event begins in</span>
-      <div className="countdown__grid">
+      <div className="countdown__row">
         {UNITS.map((u) => (
-          <div className="countdown__cell" key={u.key}>
-            <span className="countdown__glow" aria-hidden="true" />
+          <div className="countdown__unit" key={u.key}>
             <span className="countdown__num">{String(time[u.key]).padStart(2, "0")}</span>
             <span className="countdown__label">{u.label}</span>
           </div>
         ))}
       </div>
-      <span className="countdown__target">17 AUG 2026 &middot; COIMBATORE</span>
     </div>
   );
 }
