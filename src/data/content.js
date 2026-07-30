@@ -76,14 +76,14 @@ export const EVENTS = [
 ];
 
 export const SCHEDULE = [
-  { t: "9:00 – 9:45 AM", h: "Registration & Poster / Exhibit Setup" },
-  { t: "9:45 – 10:30 AM", h: "Inaugural Session", s: "Address by Chief Guest & Jury Panel" },
-  { t: "10:30 – 11:30 AM", h: "\u201cAI Beyond Borders\u201d", s: "Academia-Industry Guest Lecture & Dialogue" },
-  { t: "11:30 – 1:00 PM", h: "Poster Presentation", s: "Jury Evaluation" },
-  { t: "1:00 – 1:45 PM", h: "Lunch Break" },
-  { t: "1:45 – 3:15 PM", h: "Best AI Project Award", s: "Jury Evaluation — UG & PG Categories" },
-  { t: "3:15 – 4:15 PM", h: "Best Startup / AI Idea Pitch", s: "Finals before the Jury Panel" },
-  { t: "4:15 – 5:00 PM", h: "Valedictory Session & Prize Distribution" },
+  { start: "09:00", startPeriod: "AM", end: "09:45", endPeriod: "AM", title: "Registration & Poster / Exhibit Setup" },
+  { start: "09:45", startPeriod: "AM", end: "10:30", endPeriod: "AM", title: "Inaugural Session + Address by Chief Guest & Jury Panel" },
+  { start: "10:30", startPeriod: "AM", end: "11:30", endPeriod: "AM", title: "\u201cAI Beyond Borders\u201d \u2014 Academia-Industry Guest Lecture & Dialogue" },
+  { start: "11:30", startPeriod: "AM", end: "01:00", endPeriod: "PM", title: "Poster Presentation \u2014 Jury Evaluation" },
+  { start: "01:00", startPeriod: "PM", end: "01:45", endPeriod: "PM", title: "Lunch Break" },
+  { start: "01:45", startPeriod: "PM", end: "03:15", endPeriod: "PM", title: "Best AI Project Award \u2014 Jury Evaluation (UG & PG)" },
+  { start: "03:15", startPeriod: "PM", end: "04:15", endPeriod: "PM", title: "Best Startup / AI Idea Pitch \u2014 Finals before Jury Panel" },
+  { start: "04:15", startPeriod: "PM", end: "05:00", endPeriod: "PM", title: "Valedictory Session & Prize Distribution" },
 ];
 
 export const JURY = [
