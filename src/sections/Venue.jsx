@@ -1,5 +1,4 @@
 import { Calendar, MapPin, Users } from "lucide-react";
-import { COMMITTEE } from "../data/content.js";
 import kprLogo from "../components/kpr.png";
 import "./Venue.css";
 
@@ -65,20 +64,6 @@ export default function Venue() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* ---------- Organizing committee ---------- */}
-        <div className="venue__committee">
-          <h3 className="venue__committee-title">Organizing Committee</h3>
-          <div className="venue__committee-grid">
-            {COMMITTEE.map((m) => (
-              <div className="venue__committee-card" key={m.n}>
-                <span className="venue__committee-role">{m.role}</span>
-                <h4>{m.n}</h4>
-                <p>{m.t}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
