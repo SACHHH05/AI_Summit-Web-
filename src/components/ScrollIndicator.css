@@ -8,7 +8,7 @@
 }
 
 .scroll-indicator:hover {
-  color: var(--cyan);
+  color: var(--lime);
 }
 
 .scroll-indicator__label {

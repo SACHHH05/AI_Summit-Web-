@@ -35,8 +35,10 @@ export const OBJECTIVES = [
 
 export const EVENTS = [
   {
-    kind: "Guest Lecture",
-    title: "\u201cAI Beyond Borders\u201d \u2014 An Academia-Industry Dialogue",
+    kind: "Keynote Dialogue",
+    dotColor: "var(--lime)",
+    title: "AI Beyond Borders",
+    subtitle: "An Academia-Industry Dialogue",
     text: "A fireside-chat style session where an international academic and an industry expert exchange perspectives on the present and future of AI, followed by open Q&A.",
     label: "Speakers",
     people: [
@@ -46,36 +48,42 @@ export const EVENTS = [
   },
   {
     kind: "Competition",
-    title: "Best AI / ML Project",
-    text: "Working AI/ML project demonstrations, with UG and PG categories judged separately.",
+    dotColor: "var(--cyan)",
+    title: "Best AI Project",
+    subtitle: "UG & PG · Judged Separately",
+    text: "Live working AI/ML project demonstrations evaluated before the jury.",
     label: "Jury",
     people: [{ n: "Mr. Joyner Jebasten", a: "Lennox Technology, Chennai" }],
   },
   {
     kind: "Competition",
-    title: "Best Startup / AI Idea Pitch",
-    text: "A 5-minute pitch and Q&A before the jury panel, judged on the business viability of an AI-based idea or product.",
+    dotColor: "#ff6b6b",
+    title: "Startup / AI Idea Pitch",
+    subtitle: "5-Min Pitch + Q&A",
+    text: "Present the business viability of an AI-based idea or product before the jury panel.",
     label: "Jury",
     people: [{ n: "Prof. Dr. Ahmed Abdelgewad", a: "Professor of Computer Engineering" }],
   },
   {
-    kind: "Competition",
+    kind: "Showcase",
+    dotColor: "var(--lime)",
     title: "Poster Presentation",
-    text: "Research and innovation posters on AI/ML themes, evaluated by the international jury panel.",
+    subtitle: "Research & Innovation",
+    text: "Research and innovation posters on AI/ML themes, evaluated by the international jury panel across three parallel halls.",
     label: "Jury",
     people: [{ n: "Prof. Ir. Dr. Fauziahanim Binti Che Seman", a: "Faculty of Electrical & Electronic Engineering" }],
   },
 ];
 
 export const SCHEDULE = [
-  { t: "9:00 \u2013 9:45 AM", h: "Registration & Poster / Exhibit Setup" },
-  { t: "9:45 \u2013 10:30 AM", h: "Inaugural Session", s: "Address by Chief Guest & Jury Panel" },
-  { t: "10:30 \u2013 11:30 AM", h: "\u201cAI Beyond Borders\u201d", s: "Academia-Industry Guest Lecture & Dialogue" },
-  { t: "11:30 \u2013 1:00 PM", h: "Poster Presentation", s: "Jury Evaluation" },
-  { t: "1:00 \u2013 1:45 PM", h: "Lunch Break" },
-  { t: "1:45 \u2013 3:15 PM", h: "Best AI Project Award", s: "Jury Evaluation \u2014 UG & PG Categories" },
-  { t: "3:15 \u2013 4:15 PM", h: "Best Startup / AI Idea Pitch", s: "Finals before the Jury Panel" },
-  { t: "4:15 \u2013 5:00 PM", h: "Valedictory Session & Prize Distribution" },
+  { t: "9:00 – 9:45 AM", h: "Registration & Poster / Exhibit Setup" },
+  { t: "9:45 – 10:30 AM", h: "Inaugural Session", s: "Address by Chief Guest & Jury Panel" },
+  { t: "10:30 – 11:30 AM", h: "\u201cAI Beyond Borders\u201d", s: "Academia-Industry Guest Lecture & Dialogue" },
+  { t: "11:30 – 1:00 PM", h: "Poster Presentation", s: "Jury Evaluation" },
+  { t: "1:00 – 1:45 PM", h: "Lunch Break" },
+  { t: "1:45 – 3:15 PM", h: "Best AI Project Award", s: "Jury Evaluation — UG & PG Categories" },
+  { t: "3:15 – 4:15 PM", h: "Best Startup / AI Idea Pitch", s: "Finals before the Jury Panel" },
+  { t: "4:15 – 5:00 PM", h: "Valedictory Session & Prize Distribution" },
 ];
 
 export const JURY = [
@@ -83,7 +91,7 @@ export const JURY = [
     n: "Prof. Dr. Ahmed Abdelgewad",
     r: "Professor of Computer Engineering",
     a: "International Academic Expert",
-    tag: "Guest Lecture \u00b7 Startup Pitch Jury",
+    tag: "Guest Lecture · Startup Pitch Jury",
   },
   {
     n: "Prof. Ir. Dr. Fauziahanim Binti Che Seman",
@@ -95,7 +103,7 @@ export const JURY = [
     n: "Mr. Joyner Jebasten",
     r: "Lennox Technology, Chennai",
     a: "Industry Expert",
-    tag: "Guest Lecture \u00b7 AI Project Jury",
+    tag: "Guest Lecture · AI Project Jury",
   },
 ];
 
@@ -106,8 +114,8 @@ export const COMMITTEE = [
 ];
 
 export const STATS = [
-  { end: 100, suffix: "+", label: "Delegates Expected" },
-  { end: 4, suffix: "", label: "Flagship Events" },
+  { end: 100, suffix: "+", label: "Delegates" },
   { end: 3, suffix: "", label: "Parallel Halls" },
-  { end: 3, suffix: "", label: "International Jury" },
+  { end: 4, suffix: "", label: "Flagship Events" },
+  { end: 3, suffix: "", label: "Intl. Jurors" },
 ];
