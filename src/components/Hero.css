@@ -129,8 +129,26 @@
   max-width: 560px;
 }
 
-.hero__hl {
+.hero__actions {
+  margin-top: 36px;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
   font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  padding: 16px 30px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero__btn:hover {
+  border-color: var(--lime);
   color: var(--lime);
 }
 

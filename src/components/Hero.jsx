@@ -28,10 +28,19 @@ export default function Hero() {
             <p className="hero__desc">
               Global Technical Symposium on AI &amp; Emerging Technologies.
               <br />
-              A global technical symposium hosted by the{" "}
-              <span className="hero__hl">Dept. of CSE (Artificial Intelligence &amp; Machine Learning)</span>,{" "}
-              <span className="hero__hl">KPR Institute of Engineering and Technology</span>.
+              A global technical symposium hosted by the Dept. of CSE
+              (Artificial Intelligence &amp; Machine Learning), KPR Institute
+              of Engineering and Technology.
             </p>
+
+            <div className="hero__actions">
+              <a href="#schedule" className="hero__btn" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("schedule")?.scrollIntoView({ behavior: "smooth" });
+              }}>
+                VIEW SCHEDULE
+              </a>
+            </div>
           </div>
 
           <div className="hero__right">
